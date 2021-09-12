@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Reminders</string>
+    <string name="reminder">Reminder</string>
+    <string name="set_time">Time</string>
+    <string name="set_date">Date</string>
+    <string name="repeat">Repeat</string>
+    <string name="accept">Accept</string>
+    <string name="delete">Delete</string>
+    <string name="don_t_repeat">Don\'t Repeat</string>
+    <string name="white_dot">White dot</string>
+
+
+    <string-array name="repeat_options">
+        <item>Doesn\'t Repeat</item>
+        <item>Repeats Daily</item>
+        <item>Repeats Weekly</item>
+    </string-array>
+
+    <string-array name="reminder_titles">
+    </string-array>
+
+    <string-array name="reminder_descriptions">
+    </string-array>
+
+</resources>

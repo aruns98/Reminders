@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray">
+
+
+    <EditText
+        android:id="@+id/reminderName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/reminder"
+        android:inputType="textCapSentences"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:hint="@string/set_time"
+        app:layout_constraintBottom_toTopOf="@+id/setDateText"
+        app:layout_constraintStart_toStartOf="@+id/reminderName"
+        app:layout_constraintTop_toBottomOf="@+id/reminderName" />
+
+    <TextView
+        android:id="@+id/setDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:hint="@string/set_date"
+        app:layout_constraintBottom_toTopOf="@+id/setRepeatText"
+        app:layout_constraintStart_toStartOf="@+id/setTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/setTimeText" />
+
+    <TextView
+        android:id="@+id/setRepeatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:hint="@string/repeat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/setDateText"
+        app:layout_constraintTop_toBottomOf="@+id/setDateText" />
+
+    <Button
+        android:id="@+id/setTimeBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/darkGray"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/setTimeText"
+        app:layout_constraintEnd_toEndOf="@+id/reminderName"
+        app:layout_constraintStart_toEndOf="@+id/setDateText"
+        app:layout_constraintTop_toTopOf="@+id/setTimeText" />
+
+    <Button
+        android:id="@+id/setDateBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/darkGray"
+        android:gravity="start|center_vertical"
+        android:text=""
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/setDateText"
+        app:layout_constraintEnd_toEndOf="@+id/reminderName"
+        app:layout_constraintStart_toEndOf="@+id/setDateText"
+        app:layout_constraintTop_toTopOf="@+id/setDateText" />
+
+    <Spinner
+        android:id="@+id/setRepeatSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:backgroundTint="@color/lightGray"
+        android:gravity="start|center_vertical"
+        android:spinnerMode="dropdown"
+        android:theme="@style/SpinnerTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/setRepeatText"
+        app:layout_constraintEnd_toEndOf="@+id/reminderName"
+        app:layout_constraintStart_toEndOf="@+id/setDateText"
+        app:layout_constraintTop_toTopOf="@+id/setRepeatText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
